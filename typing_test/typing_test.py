@@ -16,7 +16,10 @@ def lines_from_file(path):
 def new_sample(path, i):
     if type(path) != str: return
     if i < 0: return
-    return lines_from_file(path)[i]
+    
+    line_list = lines_from_file(path)
+    if (i >= len(line_list)): return
+    return line_list[i]
 
             
 # END Q1-5
