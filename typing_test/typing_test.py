@@ -55,13 +55,19 @@ def pig_latin(word):
     for i in range(len(word)):
         if not word[i].isalpha(): continue
         if word[i] in ['a', 'e', 'i', 'o', 'u']: break
-           
+
     if i == 0: newword = word + "way"
     elif i == len(word) - 1: newword = word + "ay"
     else:
         newword = lower(word[i:]) + lower(word[0: i]) + 'ay'
     if ord('A') <= ord(word[0]) <= ord('Z'): return newword.capitalize()
     else: return newword
+
+def autocorrect(user_input, words_list, score_function):
+    if user_input in words_list: return user_input
+    else:
+        return min(words_list, key=lambda x: score_function(x, user_input))
+
 # END Q1-5
 
 # Question 6
