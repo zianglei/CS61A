@@ -1,5 +1,5 @@
-# cs61a-2019
-It includes projects of cs61a 2019
+# CS61A
+All labs and projects of CS61A Fall 2019
 
 ## Typing test
 [Project introduction](https://cs61a.org/proj/typing_test/)
