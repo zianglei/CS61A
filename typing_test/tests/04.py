@@ -6,14 +6,6 @@ test = {
       'cases': [
         {
           'code': r"""
-          >>> check_passphrase(passphrase) # Ensuring you completed design doc & changed passphrase
-          '814716d640bad70cbb9c76c72f2810e06f588a1bc1039d2510acab2d'
-          """,
-          'hidden': False,
-          'locked': False
-        },
-        {
-          'code': r"""
           >>> score_fn_1 = lambda w1, w2: abs(len(w2) - len(w1))
           >>> autocorrect("cul", ["culture", "cult", "cultivate"], score_fn_1)
           'cult'

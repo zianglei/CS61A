@@ -68,6 +68,10 @@ def autocorrect(user_input, words_list, score_function):
     else:
         return min(words_list, key=lambda x: score_function(x, user_input))
 
+def swap_score(string_one, string_two):
+    if len(string_one) == 0 or len(string_two) == 0: return 0
+    if string_one[0] != string_two[0]: return 1 + swap_score(string_one[1:], string_two[1:])
+    else: return swap_score(string_one[1:], string_two[1:])
 # END Q1-5
 
 # Question 6

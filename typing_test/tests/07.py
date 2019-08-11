@@ -6,14 +6,6 @@ test = {
       'cases': [
         {
           'code': r"""
-          >>> check_passphrase(passphrase) # Ensuring you completed design doc & changed passphrase
-          '814716d640bad70cbb9c76c72f2810e06f588a1bc1039d2510acab2d'
-          """,
-          'hidden': False,
-          'locked': False
-        },
-        {
-          'code': r"""
           >>> score1 = score_function_accurate("wird", "wiry")
           >>> score2 = score_function_accurate("wird", "bird")
           >>> score3 = score_function_accurate("wird", "wire")
