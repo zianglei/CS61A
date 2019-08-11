@@ -7,8 +7,17 @@ from ucb import main
 "*** YOUR CODE HERE ***"
 def lines_from_file(path):
     if type(path) != str: return
+    lines = []
     with open(path, 'r') as f:
-        return readlines(f)
+        for line in f.readlines():
+            lines.append(line.strip())
+    return lines
+
+def new_sample(path, i):
+    if type(path) != str: return
+    if i < 0: return
+    return lines_from_file(path)[i]
+
             
 # END Q1-5
 
